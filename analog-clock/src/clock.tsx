@@ -29,6 +29,7 @@ export const Clock: React.FC = () => {
     return (
         <div className={styles.clock}>
             <div className={styles.outerClockFace}>
+
                 {/* Метки на циферблате */}
                 <div className={styles.marking}></div>
                 <div className={`${styles.marking} ${styles.markingOne}`}></div>
@@ -38,9 +39,12 @@ export const Clock: React.FC = () => {
                 <div className={`${styles.marking} ${styles.markingFive}`}></div>
                 <div className={`${styles.marking} ${styles.markingSix}`}></div>
 
-                <ClockHand className={styles.hourHand} rotation={hourDegrees} />
-                <ClockHand className={styles.minuteHand} rotation={minuteDegrees} />
-                <ClockHand className={styles.secondHand} rotation={secondDegrees} />
+
+                <div className={styles.innerClockFace}>
+                    <ClockHand className={styles.hourHand} rotation={hourDegrees} />
+                    <ClockHand className={styles.minuteHand} rotation={minuteDegrees} />
+                    <ClockHand className={styles.secondHand} rotation={secondDegrees} />
+            </div>
             </div>
         </div>
     );
