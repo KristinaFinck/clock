@@ -14,6 +14,7 @@
     width: 100%;
     height: 100%;
 }
+
 .innerClockFace {
     position: absolute;
     top: 10%;
@@ -41,8 +42,6 @@
     z-index: 10; /* Чтобы винтик был выше стрелок */
 }
 
-.outer-clock-face::before,
-.outer-clock-face::after,
 .marking {
     position: absolute;
     width: 5px;
@@ -51,9 +50,11 @@
     background: #595555;
     box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2)
 }
+
 .markingOne {
     transform: rotate(30deg);
 }
+
 .markingTwo {
     transform: rotate(60deg);
 }
@@ -65,42 +66,47 @@
 .markingFour {
     transform: rotate(120deg);
 }
+
 .markingFive {
     transform: rotate(150deg);
 }
+
 .markingSix {
     transform: rotate(180deg);
 }
 
 .hand {
-    height: 15px;
+
     background: black;
     position: absolute;
     top: 50%;
     right: 50%;
     border-radius: 6px;
-    transform-origin:  100%; /* Устанавливаем начало вращения в центр дива */
+    transform: translate(-50%, -50%);
+    transform-origin: 100% 50%; /* Устанавливаем начало вращения в центр дива */
     transition-timing-function: cubic-bezier(0.1, 2.7, 0.58, 1);
     box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7),
     -1px -1px 4px rgba(255, 255, 255, 0.3);
 }
 
 .hourHand {
+    height: 10px;
     width: 40%;
     z-index: 4;
 }
 
 .minuteHand {
-    height: 8px;
+    height: 5px;
     z-index: 3;
     width: 55%;
 }
 
 .secondHand {
     background: #ee791a;
-    width: 55%;
+    width: 60%;
     height: 2px;
     z-index: 2;
+    transform: translateX(-10%);
 }
 
 
